@@ -11,7 +11,7 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from "react-router-dom";
-import Students from '../pages/student/Students';
+import Students from '../pages/students/Students';
 import Teachers from '../pages/Teachers';
 import Notices from '../pages/Notices';
 import './Drawer.css';
@@ -24,7 +24,7 @@ const routeMap = {
     notices:'/notices'
 }
 export default function AnchorTemporaryDrawer(props) {
-  const {open, setOpen} = props
+  const {opendrawer, setOpendrawer} = props
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -60,8 +60,8 @@ export default function AnchorTemporaryDrawer(props) {
     <div>      
           <Drawer
             anchor={"left"}
-            open={open}
-            onClose={() => setOpen(false)}
+            open={opendrawer}
+            onClose={() => setOpendrawer(false)}
             >
             {list()}
           </Drawer>

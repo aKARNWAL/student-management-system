@@ -1,6 +1,6 @@
 
 
-export const result = [
+ const results = [
 { id: 1, admissionNo: "1001", name: "Rahul Sharma", class: "9", section: "A", rollNo: 1, feeDue: 0, mobile: "9876543201", busService: "Yes" },
 { id: 2, admissionNo: "1002", name: "Aman Verma", class: "9", section: "A", rollNo: 2, feeDue: 500, mobile: "9876543202", busService: "No" },
 { id: 3, admissionNo: "1003", name: "Rohit Kumar", class: "9", section: "A", rollNo: 3, feeDue: 1000, mobile: "9876543203", busService: "Yes" },
@@ -144,4 +144,4 @@ export const result = [
 
 ];
 
-
+export default results;

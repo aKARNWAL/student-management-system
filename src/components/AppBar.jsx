@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import './AppBar.css';
 
-export default function CustomAppBar({setOpen}) {
+export default function CustomAppBar({setOpendrawer}) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -19,7 +19,7 @@ export default function CustomAppBar({setOpen}) {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
-            onClick={() => setOpen(true)}
+            onClick={() => setOpendrawer(true)}
           >
             <MenuIcon />
           </IconButton>

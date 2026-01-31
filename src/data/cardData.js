@@ -2,20 +2,20 @@ const cardData = [
 {
  id: 1,
  image: "student.png",
- name: "Total Student",
- number:23,
+ name: "Total Students",
+ number:120,
 },
 {
  id: 2,
  image: "classes.png",
  name: "Total Classes",
- number:50,
+ number:2,
 },
 {
  id: 3,
  image: "teacher.png",
- name: "Teacher",
- number:55,
+ name: "Teachers",
+ number:12,
 },
 
 {

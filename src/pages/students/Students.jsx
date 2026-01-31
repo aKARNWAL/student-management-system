@@ -2,8 +2,7 @@ import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
-// import studentData from "./studentData"
-import { result } from "./StudentData";
+import results from "./StudentData";
 
 
 const columns = [
@@ -69,9 +68,9 @@ const columns = [
 
 export default function Student() {
   return (
-    <div style={{ height: 450, width: "100%" }}>
+    <div style={{ height: "90vh", width: "100%" }}>
       <DataGrid
-        rows={result}
+        rows={results}
         columns={columns}
         pageSizeOptions={[20]}
         initialState={{
