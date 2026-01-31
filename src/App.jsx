@@ -4,7 +4,8 @@ import AppBar from "./components/AppBar"
 import Drawer from "./components/Drawer"
 import Home from "./pages/Home";
 import Teachers from "./pages/Teachers";
-import Students from "./pages/Students";
+import Students from "./pages/student/Students";
+
 import Notices from "./pages/Notices";
 
 function App() {
@@ -14,8 +15,6 @@ function App() {
     <>
       <AppBar setOpen = {setOpen}/>
       <Drawer open = {open} setOpen = {setOpen}/>
-      {/* <Navbar /> */}
-
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teacher" element={<Teachers />} />
