@@ -4,18 +4,17 @@ import AppBar from "./components/AppBar"
 import Drawer from "./components/Drawer"
 import Home from "./pages/Home";
 import Teachers from "./pages/Teachers";
-import Students from "./pages/Students";
+import Students from "./pages/students/Students";
+
 import Notices from "./pages/Notices";
 
 function App() {
-  const [open, setOpen] = useState(false)
+  const [opendrawer, setOpendrawer] = useState(false)
 
   return (
     <>
-      <AppBar setOpen = {setOpen}/>
-      <Drawer open = {open} setOpen = {setOpen}/>
-      {/* <Navbar /> */}
-
+      <AppBar setOpendrawer = {setOpendrawer}/>
+      <Drawer opendrawer = {opendrawer} setOpendrawer = {setOpendrawer}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/teacher" element={<Teachers />} />
