@@ -17,8 +17,8 @@ function App() {
       <Drawer opendrawer = {opendrawer} setOpendrawer = {setOpendrawer}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/teacher" element={<Teachers />} />
-        <Route path="/student" element={<Students />} />
+        <Route path="/teachers" element={<Teachers />} />
+        <Route path="/students" element={<Students />} />
         <Route path="/notices" element={<Notices />} />
       </Routes>
      </>

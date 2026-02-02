@@ -19,8 +19,8 @@ import './Drawer.css';
 
 const routeMap = {
     home: '/',
-    students: '/student',
-    teachers:'/teacher',
+    students: '/students',
+    teachers:'/teachers',
     notices:'/notices'
 }
 export default function AnchorTemporaryDrawer(props) {
