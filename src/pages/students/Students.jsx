@@ -4,7 +4,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
 import React, { useEffect, useState } from "react";
 // import results from "./StudentData";
-import  {getStudentData} from "./StudentApi";
+import  {getStudentsData} from "./StudentApi";
 
   export default function Student() {
   const [rows, setRows] = useState([]);
@@ -69,7 +69,7 @@ const columns = [
   },
 ];
   useEffect(() => {
-    getStudentData().then((data) => {
+    getStudentsData().then((data) => {
       setRows(data);
     });
   }, []);
@@ -83,6 +83,17 @@ const columns = [
         rows={rows}
         columns={columns}
         pageSizeOptions={[20, 40, 100]}
+        sortingMode="server"
+        filterMode="server"
+        paginationMode="server"
+         onPaginationModelChange={(newPaginationModel) => {
+    // fetch data from server
+    console.log(newPaginationModel)
+  }}
+  onSortModelChange={(newSortModel) => {
+    // fetch data from server
+    console.log(newSortModel)
+  }}
         initialState={{
           pagination: {
             paginationModel: {

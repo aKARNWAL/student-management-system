@@ -24,7 +24,7 @@ const routeMap = {
     notices:'/notices'
 }
 export default function AnchorTemporaryDrawer(props) {
-  const {opendrawer, setOpendrawer} = props
+  const {openDrawer, setOpenDrawer} = props
 
   const toggleDrawer = (open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -60,8 +60,8 @@ export default function AnchorTemporaryDrawer(props) {
     <div>      
           <Drawer
             anchor={"left"}
-            open={opendrawer}
-            onClose={() => setOpendrawer(false)}
+            open={openDrawer}
+            onClose={() => setOpenDrawer(false)}
             >
             {list()}
           </Drawer>
