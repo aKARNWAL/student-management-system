@@ -1,10 +1,13 @@
-import React from "react";
+
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Button from "@mui/material/Button";
-import results from "./StudentData";
+import React, { useEffect, useState } from "react";
+// import results from "./StudentData";
+import  {getStudentData} from "./StudentApi";
 
-
+  export default function Student() {
+  const [rows, setRows] = useState([]);
 const columns = [
   {
     field: "admissionNo",
@@ -65,14 +68,21 @@ const columns = [
     },
   },
 ];
+  useEffect(() => {
+    getStudentData().then((data) => {
+      setRows(data);
+    });
+  }, []);
 
-export default function Student() {
+
+
+
   return (
     <div style={{ height: "90vh", width: "100%" }}>
       <DataGrid
-        rows={results}
+        rows={rows}
         columns={columns}
-        pageSizeOptions={[20]}
+        pageSizeOptions={[20, 40, 100]}
         initialState={{
           pagination: {
             paginationModel: {
