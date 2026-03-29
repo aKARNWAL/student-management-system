@@ -9,16 +9,16 @@ import Students from "./pages/students/Students";
 import Notices from "./pages/Notices";
 
 function App() {
-  const [opendrawer, setOpendrawer] = useState(false)
+  const [openDrawer, setOpenDrawer] = useState(false)
 
   return (
     <>
-      <AppBar setOpendrawer = {setOpendrawer}/>
-      <Drawer opendrawer = {opendrawer} setOpendrawer = {setOpendrawer}/>
+      <AppBar setOpenDrawer = {setOpenDrawer}/>
+      <Drawer openDrawer = {openDrawer} setOpenDrawer = {setOpenDrawer}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/teacher" element={<Teachers />} />
-        <Route path="/student" element={<Students />} />
+        <Route path="/teachers" element={<Teachers />} />
+        <Route path="/students" element={<Students />} />
         <Route path="/notices" element={<Notices />} />
       </Routes>
      </>
